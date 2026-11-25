@@ -1,0 +1,80 @@
+AI SWING STRUCTURE - V1.01 DATA & FEATURE AUDIT
+============================================================================
+Status                    : PASSED_WITH_WARNINGS
+Symbol / timeframe        : EURUSDm / H1
+Feature CSV               : C:\AI_Swing_Structure\data\processed\features_EURUSDm_H1_20261124T012301Z.csv
+Feature manifest          : C:\AI_Swing_Structure\data\processed\features_EURUSDm_H1_20261124T012301Z_manifest.json
+Rows                      : 49796
+Feature columns           : 49
+Invalid timestamps        : 0
+Duplicate timestamps      : 0
+Chronological order       : True
+NaN / infinity values     : 0
+Target-like feature names : 0
+
+FEATURE QUALITY SUMMARY
+Constant features         : 0
+High-skew features        : 3
+Outlier-rate > 1% features: 2
+High-correlation pairs   : 5 (threshold=0.980)
+High-drift features       : 1 (PSI >= 0.25)
+Moderate-drift features   : 1 (0.10 <= PSI < 0.25)
+Spread feature present    : True
+
+CONSTANT FEATURES
+  None
+
+HIGH-SKEW FEATURES
+close_gap_atr
+tick_volume_ratio_50
+spread_points
+
+OUTLIER-RATE FEATURES
+close_gap_atr
+spread_points
+
+HIGH-DRIFT FEATURES
+spread_points
+
+MODERATE-DRIFT FEATURES
+atr_pct_close
+
+HIGH-CORRELATION PAIRS (top 15)
+  ema_50_dist_atr <-> ema_50_slope_1_atr | Pearson=1.0000 | Spearman=1.0000 | max_abs=1.0000
+  ema_20_dist_atr <-> ema_20_slope_1_atr | Pearson=1.0000 | Spearman=1.0000 | max_abs=1.0000
+  ema_200_dist_atr <-> ema_200_slope_1_atr | Pearson=1.0000 | Spearman=1.0000 | max_abs=1.0000
+  ema_200_dist_atr <-> ema_200_slope_5_atr | Pearson=0.9886 | Spearman=0.9877 | max_abs=0.9886
+  ema_200_slope_1_atr <-> ema_200_slope_5_atr | Pearson=0.9886 | Spearman=0.9877 | max_abs=0.9886
+
+TOP DRIFT FEATURES (train vs validation/test PSI)
+  spread_points: PSI val=0.8480 (HIGH_DRIFT_REVIEW); test=1.7926 (HIGH_DRIFT_REVIEW)
+  atr_pct_close: PSI val=0.0715 (LOW_DRIFT); test=0.1393 (MODERATE_DRIFT_REVIEW)
+  tick_volume_ratio_50: PSI val=0.0461 (LOW_DRIFT); test=0.0690 (LOW_DRIFT)
+  candle_range_atr: PSI val=0.0027 (LOW_DRIFT); test=0.0312 (LOW_DRIFT)
+  close_gap_atr: PSI val=0.0383 (LOW_DRIFT); test=0.0223 (LOW_DRIFT)
+  swing_high_distance_atr: PSI val=0.0022 (LOW_DRIFT); test=0.0213 (LOW_DRIFT)
+  ema_200_slope_5_atr: PSI val=0.0328 (LOW_DRIFT); test=0.0213 (LOW_DRIFT)
+  ema_200_dist_atr: PSI val=0.0332 (LOW_DRIFT); test=0.0153 (LOW_DRIFT)
+  ema_200_slope_1_atr: PSI val=0.0332 (LOW_DRIFT); test=0.0153 (LOW_DRIFT)
+  range_10_atr: PSI val=0.0048 (LOW_DRIFT); test=0.0151 (LOW_DRIFT)
+  ema_gap_20_50_atr: PSI val=0.0095 (LOW_DRIFT); test=0.0126 (LOW_DRIFT)
+  ema_20_slope_5_atr: PSI val=0.0041 (LOW_DRIFT); test=0.0114 (LOW_DRIFT)
+  close_to_swing_mid_atr: PSI val=0.0033 (LOW_DRIFT); test=0.0113 (LOW_DRIFT)
+  candle_lower_wick_ratio: PSI val=0.0130 (LOW_DRIFT); test=0.0106 (LOW_DRIFT)
+  ema_50_slope_5_atr: PSI val=0.0075 (LOW_DRIFT); test=0.0103 (LOW_DRIFT)
+
+INTERPRETATION NOTES
+- Correlation, skew, outlier, and PSI flags are review indicators; no feature is auto-removed.
+- PSI uses the first 60% of chronological rows as reference, next 20% as validation-like, last 20% as test-like.
+- This PSI split is descriptive only; it does not replace purged walk-forward model validation.
+- spread_points is broker-dependent and must be reviewed before cross-broker reuse.
+- The audit does not alter CSVs, labels, models, or training outputs.
+
+OUTPUT FILES
+Feature statistics        : C:\AI_Swing_Structure\data\processed\feature_audit\feature_statistics_EURUSDm_H1_20261124T160452Z.csv
+Correlation pairs         : C:\AI_Swing_Structure\data\processed\feature_audit\feature_correlations_EURUSDm_H1_20261124T160452Z.csv
+Chronological PSI         : C:\AI_Swing_Structure\data\processed\feature_audit\feature_drift_psi_EURUSDm_H1_20261124T160452Z.csv
+Yearly stability          : C:\AI_Swing_Structure\data\processed\feature_audit\feature_yearly_stability_EURUSDm_H1_20261124T160452Z.csv
+JSON summary              : C:\AI_Swing_Structure\data\processed\feature_audit\feature_audit_EURUSDm_H1_20261124T160452Z.json
+Audit report              : C:\AI_Swing_Structure\reports\feature_audit_v101_EURUSDm_H1_20261124T160452Z.txt
+============================================================================

@@ -1,0 +1,41 @@
+{
+  "project": "AI_Swing_Structure",
+  "audit_version": "1.01-data-feature-audit",
+  "created_utc": "2026-11-24T16:04:52.509159+00:00",
+  "status": "PASSED_WITH_WARNINGS",
+  "symbol": "EURUSDm",
+  "timeframe": "H1",
+  "source_feature_csv": "C:\\AI_Swing_Structure\\data\\processed\\features_EURUSDm_H1_20261124T012301Z.csv",
+  "source_manifest": "C:\\AI_Swing_Structure\\data\\processed\\features_EURUSDm_H1_20261124T012301Z_manifest.json",
+  "rows": 49796,
+  "feature_count": 49,
+  "invalid_timestamps": 0,
+  "duplicate_timestamps": 0,
+  "chronological_order": true,
+  "nonfinite_values": 0,
+  "constant_features": [],
+  "high_skew_features": [
+    "close_gap_atr",
+    "tick_volume_ratio_50",
+    "spread_points"
+  ],
+  "outlier_rate_features": [
+    "close_gap_atr",
+    "spread_points"
+  ],
+  "high_correlation_pairs": 5,
+  "high_drift_features": [
+    "spread_points"
+  ],
+  "moderate_drift_features": [
+    "atr_pct_close"
+  ],
+  "spread_feature_present": true,
+  "outputs": {
+    "statistics": "C:\\AI_Swing_Structure\\data\\processed\\feature_audit\\feature_statistics_EURUSDm_H1_20261124T160452Z.csv",
+    "correlations": "C:\\AI_Swing_Structure\\data\\processed\\feature_audit\\feature_correlations_EURUSDm_H1_20261124T160452Z.csv",
+    "drift_psi": "C:\\AI_Swing_Structure\\data\\processed\\feature_audit\\feature_drift_psi_EURUSDm_H1_20261124T160452Z.csv",
+    "yearly_stability": "C:\\AI_Swing_Structure\\data\\processed\\feature_audit\\feature_yearly_stability_EURUSDm_H1_20261124T160452Z.csv",
+    "report": "C:\\AI_Swing_Structure\\reports\\feature_audit_v101_EURUSDm_H1_20261124T160452Z.txt"
+  }
+}
