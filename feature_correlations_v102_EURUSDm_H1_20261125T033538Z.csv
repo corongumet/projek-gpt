@@ -1,0 +1,2 @@
+feature_a,feature_b,pearson,spearman,max_abs_correlation,review
+ema_200_dist_atr,ema_200_slope_5_atr,0.9885864140749575,0.987696035322134,0.9885864140749575,POTENTIALLY_REDUNDANT_DO_NOT_AUTO_DROP

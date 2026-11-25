@@ -1,0 +1,56 @@
+AI SWING STRUCTURE - V1.02 FEATURE SCHEMA AUDIT
+========================================================================
+Status                         : PASSED_WITH_WARNINGS
+Symbol / timeframe             : EURUSDm / H1
+Feature CSV                    : C:\AI_Swing_Structure\data\processed\features_EURUSDm_H1_V102_20261125T032941Z.csv
+Manifest                       : C:\AI_Swing_Structure\data\processed\features_EURUSDm_H1_V102_20261125T032941Z_manifest.json
+Rows                           : 49796
+Model input features           : 45
+Diagnostic-only features       : 4
+Invalid / duplicate timestamps : 0 / 0
+Chronological order            : True
+NaN / infinity values          : 0
+High-correlation model pairs   : 1 (threshold=0.980)
+High-drift model features      : 0
+Moderate-drift model features  : 1
+High-drift diagnostics         : 1
+
+MODEL INPUT REVIEW
+  Constant: None
+  High skew: ['close_gap_atr', 'tick_volume_ratio_50']
+  Outlier rate >1%: ['close_gap_atr']
+  High drift: None
+  Moderate drift: ['atr_pct_close']
+
+DIAGNOSTIC-ONLY REVIEW (NOT USED BY MODEL)
+  High drift: ['spread_points']
+
+HIGH-CORRELATION MODEL PAIRS
+  ema_200_dist_atr <-> ema_200_slope_5_atr | Pearson=0.9886 | Spearman=0.9877
+
+TOP MODEL INPUT DRIFT (PSI)
+  atr_pct_close: validation=0.0715 (LOW_DRIFT); test=0.1393 (MODERATE_DRIFT_REVIEW)
+  tick_volume_ratio_50: validation=0.0461 (LOW_DRIFT); test=0.0690 (LOW_DRIFT)
+  candle_range_atr: validation=0.0027 (LOW_DRIFT); test=0.0312 (LOW_DRIFT)
+  close_gap_atr: validation=0.0383 (LOW_DRIFT); test=0.0223 (LOW_DRIFT)
+  swing_high_distance_atr: validation=0.0022 (LOW_DRIFT); test=0.0213 (LOW_DRIFT)
+  ema_200_slope_5_atr: validation=0.0328 (LOW_DRIFT); test=0.0213 (LOW_DRIFT)
+  ema_200_dist_atr: validation=0.0332 (LOW_DRIFT); test=0.0153 (LOW_DRIFT)
+  range_10_atr: validation=0.0048 (LOW_DRIFT); test=0.0151 (LOW_DRIFT)
+  ema_gap_20_50_atr: validation=0.0095 (LOW_DRIFT); test=0.0126 (LOW_DRIFT)
+  ema_20_slope_5_atr: validation=0.0041 (LOW_DRIFT); test=0.0114 (LOW_DRIFT)
+  close_to_swing_mid_atr: validation=0.0033 (LOW_DRIFT); test=0.0113 (LOW_DRIFT)
+  candle_lower_wick_ratio: validation=0.0130 (LOW_DRIFT); test=0.0106 (LOW_DRIFT)
+  ema_50_slope_5_atr: validation=0.0075 (LOW_DRIFT); test=0.0103 (LOW_DRIFT)
+  candle_upper_wick_ratio: validation=0.0058 (LOW_DRIFT); test=0.0084 (LOW_DRIFT)
+  ema_20_dist_atr: validation=0.0038 (LOW_DRIFT); test=0.0077 (LOW_DRIFT)
+
+OUTPUT FILES
+  Statistics (role-tagged) : C:\AI_Swing_Structure\data\processed\feature_audit\feature_statistics_v102_EURUSDm_H1_20261125T033538Z.csv
+  Model correlations       : C:\AI_Swing_Structure\data\processed\feature_audit\feature_correlations_v102_EURUSDm_H1_20261125T033538Z.csv
+  Model drift PSI          : C:\AI_Swing_Structure\data\processed\feature_audit\feature_drift_model_v102_EURUSDm_H1_20261125T033538Z.csv
+  Diagnostic drift PSI     : C:\AI_Swing_Structure\data\processed\feature_audit\feature_drift_diagnostic_v102_EURUSDm_H1_20261125T033538Z.csv
+  Yearly stability         : C:\AI_Swing_Structure\data\processed\feature_audit\feature_yearly_stability_v102_EURUSDm_H1_20261125T033538Z.csv
+  JSON summary             : C:\AI_Swing_Structure\data\processed\feature_audit\feature_audit_v102_EURUSDm_H1_20261125T033538Z.json
+  Report                   : C:\AI_Swing_Structure\reports\feature_audit_v102_EURUSDm_H1_20261125T033538Z.txt
+========================================================================

@@ -1,0 +1,74 @@
+AI SWING STRUCTURE - V1.02 FEATURE SCHEMA REFINEMENT
+========================================================================
+Status                      : PASSED
+Symbol / timeframe          : EURUSDm / H1
+Source OHLC                 : C:\AI_Swing_Structure\data\raw\ohlc_EURUSDm_H1_20261123T123326Z.csv
+Source rows                 : 50000
+Feature rows                : 49796
+Removed warm-up/incomplete  : 204
+All computed feature cols   : 49
+Model input feature cols    : 45
+Diagnostic-only feature cols: 4
+Non-finite feature values   : 0
+Schema SHA256               : 144e9cf3220e8f27914652a0d2785bca986d828165b86a09eeff79447ed3cdf9
+
+REMOVED FROM MODEL INPUT (RETAINED IN CSV AS DIAGNOSTICS)
+  ema_20_slope_1_atr: MATHEMATICALLY_REDUNDANT_WITH_SAME_PERIOD_EMA_DISTANCE_ATR
+  ema_50_slope_1_atr: MATHEMATICALLY_REDUNDANT_WITH_SAME_PERIOD_EMA_DISTANCE_ATR
+  ema_200_slope_1_atr: MATHEMATICALLY_REDUNDANT_WITH_SAME_PERIOD_EMA_DISTANCE_ATR
+  spread_points: BROKER_DEPENDENT_EXECUTION_DIAGNOSTIC_NOT_MODEL_INPUT
+
+MODEL FEATURE COLUMNS
+  atr_pct_close
+  atr_ratio_50
+  ema_20_dist_atr
+  ema_20_slope_5_atr
+  ema_50_dist_atr
+  ema_50_slope_5_atr
+  ema_200_dist_atr
+  ema_200_slope_5_atr
+  ema_gap_20_50_atr
+  ema_gap_50_200_atr
+  adx_14
+  adx_delta_1
+  adx_delta_3
+  di_plus
+  di_minus
+  di_difference
+  candle_body_ratio
+  candle_upper_wick_ratio
+  candle_lower_wick_ratio
+  candle_close_location
+  candle_range_atr
+  close_gap_atr
+  return_1_atr
+  return_3_atr
+  return_5_atr
+  efficiency_ratio_10
+  range_10_atr
+  close_location_range_10
+  efficiency_ratio_20
+  range_20_atr
+  close_location_range_20
+  tick_volume_ratio_50
+  swing_high_distance_atr
+  swing_low_distance_atr
+  swing_high_age_bars
+  swing_low_age_bars
+  swing_new_pivot_high
+  swing_new_pivot_low
+  swing_higher_high
+  swing_lower_high
+  swing_higher_low
+  swing_lower_low
+  bos_up
+  bos_down
+  close_to_swing_mid_atr
+
+Feature CSV                 : C:\AI_Swing_Structure\data\processed\features_EURUSDm_H1_V102_20261125T032941Z.csv
+Feature manifest            : C:\AI_Swing_Structure\data\processed\features_EURUSDm_H1_V102_20261125T032941Z_manifest.json
+Report                      : C:\AI_Swing_Structure\reports\feature_schema_v102_EURUSDm_H1_20261125T032941Z.txt
+Labels created              : NO
+Models trained              : NO
+Original V1.01 calculations: UNCHANGED
+========================================================================

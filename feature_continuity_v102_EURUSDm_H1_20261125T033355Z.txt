@@ -1,0 +1,23 @@
+AI SWING STRUCTURE - V1.02 FEATURE CONTINUITY VALIDATION
+========================================================================
+Status                         : PASSED
+Raw OHLC                      : C:\AI_Swing_Structure\data\raw\ohlc_EURUSDm_H1_20261123T123326Z.csv
+Feature CSV                   : C:\AI_Swing_Structure\data\processed\features_EURUSDm_H1_V102_20261125T032941Z.csv
+Raw source rows               : 50000
+Feature rows                  : 49796
+Model feature count           : 45
+Diagnostic feature count      : 4
+Feature timestamps not in raw : 0
+Internal skipped raw rows     : 0
+Non-increasing position jumps : 0
+Leading warm-up rows removed  : 204
+Trailing raw rows not featured: 0
+NaN / infinity feature values : 0
+First feature UTC             : 2018-11-21T10:00:00+00:00
+Last feature UTC              : 2026-11-23T11:00:00+00:00
+
+INTERPRETATION
+  Internal skipped rows must be zero before using the 24-row label horizon.
+  Weekend/holiday gaps are acceptable when the timestamps are adjacent rows in the raw export.
+  Leading warm-up rows are expected; trailing excluded rows require review.
+========================================================================
