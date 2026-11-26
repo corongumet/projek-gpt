@@ -1,0 +1,39 @@
+AI SWING STRUCTURE - V1.03 LABEL DATASET VALIDATION
+======================================================================
+Status                         : PASSED
+Symbol / timeframe             : EURUSDm / H1
+Raw OHLC                       : C:\AI_Swing_Structure\data\raw\ohlc_EURUSDm_H1_20261123T123326Z.csv
+Feature rows                   : 49796
+Label rows                     : 49772
+Tail rows removed              : 24
+Forward horizon                : 24 consecutive raw bars
+Feature timestamps missing raw : 0
+Internal raw position jumps    : 0
+Output CSV parts                : 5
+Max rows per CSV part           : 10000
+Parts manifest                 : C:\AI_Swing_Structure\data\processed\labels_EURUSDm_H1_V103_20261126T021854Z_parts_manifest.json
+First label UTC                : 2018-11-21T10:00:00+00:00
+Last label UTC                 : 2026-11-20T11:00:00+00:00
+
+REGIME DISTRIBUTION
+  TRENDING    :  10,691 ( 21.4799%)
+  RANGING     :   6,126 ( 12.3081%)
+  TRANSITION  :  32,955 ( 66.2119%)
+
+DIRECTION DISTRIBUTION
+  BULLISH     :   9,367 ( 18.8198%)
+  BEARISH     :   9,874 ( 19.8385%)
+  NEUTRAL     :  30,531 ( 61.3417%)
+
+LABEL DEFINITIONS (UNCHANGED FROM V1.01)
+  TRENDING: abs(move_atr) >= 1.00 and efficiency >= 0.35
+  RANGING: abs(move_atr) <= 0.50 and efficiency <= 0.25
+  TRANSITION: otherwise
+  BULLISH: move_atr >= 0.50 and efficiency >= 0.25
+  BEARISH: move_atr <= -0.50 and efficiency >= 0.25
+  NEUTRAL: otherwise
+
+Horizon counts 24 consecutive rows in raw OHLC, not 24 clock hours.
+Weekend/holiday gaps are acceptable; missing raw rows within feature sequence are not.
+This stage validates labels only; no model training is performed.
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 

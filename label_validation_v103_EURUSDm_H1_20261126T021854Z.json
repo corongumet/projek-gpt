@@ -1,0 +1,49 @@
+{
+  "status": "PASSED",
+  "feature_rows": 49796,
+  "label_rows": 49772,
+  "tail_rows_removed": 24,
+  "horizon_raw_bars": 24,
+  "feature_timestamps_missing_in_raw": 0,
+  "internal_raw_position_jumps": 0,
+  "feature_timestamp_duplicates": 0,
+  "raw_timestamp_duplicates": 0,
+  "first_feature_utc": "2018-11-21T10:00:00+00:00",
+  "last_feature_utc": "2026-11-23T11:00:00+00:00",
+  "first_label_utc": "2018-11-21T10:00:00+00:00",
+  "last_label_utc": "2026-11-20T11:00:00+00:00",
+  "first_future_target_utc": "2018-11-22T10:00:00+00:00",
+  "last_future_target_utc": "2026-11-23T11:00:00+00:00",
+  "regime_distribution": {
+    "TRENDING": {
+      "count": 10691,
+      "percent": 21.479949
+    },
+    "RANGING": {
+      "count": 6126,
+      "percent": 12.308125
+    },
+    "TRANSITION": {
+      "count": 32955,
+      "percent": 66.211926
+    }
+  },
+  "direction_distribution": {
+    "BULLISH": {
+      "count": 9367,
+      "percent": 18.819818
+    },
+    "BEARISH": {
+      "count": 9874,
+      "percent": 19.838463
+    },
+    "NEUTRAL": {
+      "count": 30531,
+      "percent": 61.341718
+    }
+  },
+  "move_atr_min": -25.559972801648783,
+  "move_atr_max": 23.736327371838968,
+  "efficiency_min": 0.0,
+  "efficiency_max": 0.8194816800715153
+}
